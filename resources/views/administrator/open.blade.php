@@ -124,7 +124,7 @@
 
             <div class="text-center">
 
-                <h3 class="pink-text mb-5"><strong>Profile</strong></h3>
+                <h3 class="pink-text mb-5"><strong>Applicant</strong></h3>
             </div>
             <div clas="text" style="color:black;"> 
             <table class="table table-striped">

@@ -9,7 +9,7 @@
         <div class="card-body mx-4">
 
             <div class="text-center">
-                <h3 class="pink-text mb-5"><strong>Profile</strong></h3>
+                <h3 class="indigo-text mb-5"><strong>Profile</strong></h3>
             </div>
             
             <div clas="text" style="color:black;"> 
@@ -34,6 +34,11 @@
                         <td>Address</td>
                         <td>:</td>
                         <td>{!! $applicants->address !!}</td>
+                    </tr>
+                    <tr>
+                        <td>CV</td>
+                        <td>:</td>
+                        <td>{!! $applicants->file !!}</td>
                     </tr>
                     <tr>
                         <td>Status</td>

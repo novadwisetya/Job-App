@@ -24,7 +24,7 @@ class UserController extends Controller
                 'password' => $request->password
             ));
 
-        $writerrole = Sentinel::findRoleByName('Writer');
+        $writerrole = Sentinel::findRoleByName('user');
         $newUser->roles()->attach($writerrole);
 
         Session::flash('notice', 'Success create new user');

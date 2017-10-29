@@ -23,11 +23,15 @@ class JobappController extends Controller
 
     public function profile()
     {
-        $test = Sentinel::getUser();
-        $user_id = $test->id;
-
-        $applicants = Applicant::where('user_id','=', 12)->get()->first();
+        $test = Sentinel::getUser();        
+        $userId = $test->id;
+        if( Applicant::where('user_id','=', $userId)->get()->first() != null){
+        $applicants = Applicant::where('user_id','=', $userId)->get()->first();
         return view('client.profile')->with('applicants', $applicants);
+        }else
+        {
+        return view('client.join');
+        }
     }
 
     public function index()
@@ -89,7 +93,6 @@ class JobappController extends Controller
     {
 
     }
-
     /**
      * Update the specified resource in storage.
      *

@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="/css/mdb.min.css" rel="stylesheet">
 
     <!-- Template styles -->
     <style rel="stylesheet">
@@ -61,12 +61,8 @@
         }
         /*Call to action*/
         
-        .flex-center {
-            color: #fff;
-        }
-        
         .view {
-            background: url("https://mdbootstrap.com/img/Photos/Others/img%20(50).jpg")no-repeat center center fixed;
+            background: url("/img/background.jpg")no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -119,6 +115,31 @@
     <!--Mask-->
     <div class="view hm-black-light">
         <div class="full-bg-img flex-center">
+             <!-- @if (Session::has('error'))
+             <div class="card" style="width:400px;">
+
+                <div class="card-body mx-4">
+                        <div class="text-center">
+                            <h3 class="pink-text mb-5"><strong>Login</strong></h3>
+                        </div> 
+                        <div class="text-center">
+                        {{Session::get('error')}}
+                        </div>         
+                    </div>
+                </div>
+            @endif
+            @if (Session::has('notice'))
+             <div class="card" style="width:400px;">
+                <div class="card-body mx-4">
+                        <div class="text-center">
+                            <h3 class="pink-text mb-5"><strong>Login</strong></h3>
+                        </div>                        
+                        <div class="text-center">
+                        {{Session::get('notice')}}
+                        </div>
+                    </div>
+                </div>
+            @endif -->
             @yield('content')
         </div>
     </div>

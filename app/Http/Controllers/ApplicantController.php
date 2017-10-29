@@ -21,6 +21,13 @@ class ApplicantController extends Controller
      */
     public function index()
     {
+        
+        $test = Sentinel::getUser();
+        $userId = $test->id;
+        if(Applicant::where('user_id','=', $userId)->get()->first() != null){
+            $applicants = Applicant::where('user_id','=', $userId)->get()->first();
+            return view('client.profile')->with('applicants', $applicants);
+        }
         return view('client.join');
     }
 
@@ -43,7 +50,13 @@ class ApplicantController extends Controller
     public function store(Request $request)
     {
         
-        
+        $this->validate($request,[
+            'name'=>'required',
+            'email'=>'required',
+            'contact'=>'required',
+            'address'=>'required',
+            'cv'=>'max:10000|mimes:pdf'
+         ]);
            
         $new_applicant = new Applicant;
         $new_applicant-> user_id = $request->id;
@@ -65,7 +78,7 @@ class ApplicantController extends Controller
         
                 
         Session::flash("notice", "Success, Thanks you ");
-        return Redirect::to('/join'); 
+        return Redirect::to('/profile'); 
     }
     /**
      * Display the specified resource.

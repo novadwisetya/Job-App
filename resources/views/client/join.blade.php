@@ -11,7 +11,7 @@
 
             <!--Header-->
             <div class="text-center">
-                <h3 class="pink-text mb-5"><strong>Apply</strong></h3>
+                <h3 class="indigo-text mb-5"><strong>Apply</strong></h3>
             </div>
             
             <!--Body-->
@@ -24,6 +24,7 @@
                     {{ Form::hidden('id', Sentinel::getUser()->id) }}
                         @else
                         @endif
+                        <i class="fa fa-user prefix indigo-text"></i>
                         <input type="text" id="Form-email2" class="form-control" name="name">
                         <label for="Form-email2">Full name</label>  
                     </div>   
@@ -33,6 +34,7 @@
                 </div>
                 <div class="col">  
                     <div class="md-form">
+                        <i class="fa fa-envelope prefix indigo-text"></i>
                         <input type="text" id="Form-email2" class="form-control" name="email">
                         <label for="Form-email2">Email</label>
                     </div>
@@ -45,6 +47,7 @@
         <div class="row">
                 <div class="col">
                     <div class="md-form pb-3">
+                    <i class="fa fa-address-book prefix indigo-text"></i>
                         <input type="text" id="Form-pass2" class="form-control" name="contact">
                         <label for="Form-pass2">Contact</label>                
                     </div>
@@ -56,6 +59,7 @@
                 </div>
                 <div class="col">
                     <div class="md-form pb-3">
+                        <i class="fa fa-address-book prefix indigo-text"></i>
                         <input type="text" id="Form-pass2" class="form-control" name="address">
                         <label for="Form-pass2">Address</label>                
                     </div>
@@ -65,16 +69,13 @@
                     </div>   
                 </div> 
             </div> 
-                    <div class="md-form pb-3">
-                        <p style="color:black;">Upload CV</p>
-                        <input type="file" name="cv" />   
-                        <input type="submit" class="btn btn-primary red">            
-                    </div>
-
-                    <div class="text-danger">
-                        
-                    </div>                    
-                
+            <div class="md-form">
+                <p class="grey-text">Upload CV</p>
+                <input type="file" name="cv"/>              
+            </div>
+            <div class="md-form align-self-center text-center">
+                <input type="submit" class="btn btn-indigo indigo">            
+            </div>
                                   
         
     {!! Form::close() !!}  

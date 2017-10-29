@@ -57,7 +57,7 @@
                           <td>{!! $applicant->email !!}</td>
                           <td>{!! $applicant->contact !!} </td>
                           <td>{!! $applicant->address !!}</td>
-                          <td>{!! $applicant->status !!}</td>
+                          <td><b>{!! $applicant->status !!}</b></td>
                           <td> 
                               <div class="btn-group">
                                   <button type="button" class="btn btn-danger">Action</button>

@@ -28,7 +28,7 @@ class SessionsController extends Controller
         } else 
         {
             Session::flash("error", "Login fails");
-            return view('sessions.login');
+            return view('auth.login');
         }
     }
     public function logout() 

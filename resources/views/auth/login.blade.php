@@ -1,44 +1,41 @@
 @extends('layouts.application')
 @section('content')
 
-@extends('layouts.application')
-@section('content')
-
 
     <!--Form without header-->
     <div class="card" style="width:400px;">
 
         <div class="card-body mx-4">
 
+           
             <!--Header-->
             <div class="text-center">
-                <h3 class="pink-text mb-5"><strong>Login</strong></h3>
+                <h3 class="indigo-text mb-5"><strong>Login</strong></h3>
             </div>
+
 
             <!--Body-->
             {!! Form::open(['route' => 'login.store', 'class' => 'form-horizontal', 'role' => 'form']) !!}
-            <div class="md-form">
-                <input type="text" id="Form-email2" class="form-control" name="email">
-                <label for="Form-email2">Email</label>
+            <div class="md-form form-group">
+                <i class="fa fa-envelope prefix indigo-text"></i>
+                <input type="email" id="form91" class="form-control validate" name="email">
+                <label for="form91" data-error="wrong" data-success="right">Email</label>
             </div>
-            <div class="md-form pb-3">
-                <input type="password" id="Form-pass2" class="form-control" name="password">
-                <label for="Form-pass2">Password</label>        
+    
+            <div class="md-form form-group">
+                <i class="fa fa-lock prefix indigo-text"></i>
+                <input type="password" id="form92" class="form-control validate" name="password">
+                <label for="form92" data-error="wrong" data-success="right">Password</label>
             </div>
-            <div class="md-form">
-               <!-- {!! Form::label('remember', 'Remember Me', array('class' => 'col-lg-3 control-label')) !!}
-                {!! Form::checkbox('remember', null, array('class' => 'form-control')) !!} -->
-            </div>
+            
             <!--Grid row-->
-            <div class="row d-flex align-items-center mb-4" >
-
-                <input type="submit" class="btn btn-primary red">
-
-                <div class="col-md-6">
-                   <!-- <p class="font-small grey-text d-flex justify-content-end"><a href="#" class="blue-text ml-1"> Register</a></p> -->
+            <div class="md-form form-group">
+                <div class="row justify-content-md-center">        
+                    <input type="submit" class="btn btn-indigo indigo" value="Login"> <br>
                 </div>
-                <!--Grid column-->
             </div>
+            <p class="font-small grey-text">Not a member? <a href="/signup" class="blue-text ml-1">Register.</a></p>    
+           
             {!! Form::close() !!}
             <!--Grid row-->
         </div>
