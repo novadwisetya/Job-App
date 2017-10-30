@@ -71,7 +71,36 @@
         </div>
         <div class="row">
             <div class="col align-self-center text-center">
-                <input type="submit" class="btn btn-indigo indigo" value="Register">
+                <input type="submit" class="btn btn-indigo indigo" value="Register" data-toggle="modal" data-target="#modalNotice">
+                 <!-- ================ Modal ============================ -->
+                            <!-- Central Modal Medium Success -->
+                        @if (Session::has('notice'))
+                        <div class="modal fade" id="modalNotice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+                                <!--Content-->
+                                <div class="modal-content text-center">
+                                    <!--Header-->
+                                    <div class="modal-header d-flex justify-content-center">
+                                        <p class="heading">Success</p>
+                                    </div>
+
+                                    <!--Body-->
+                                    <div class="modal-body">
+
+                                        <i class="fa fa-times fa-4x animated rotateIn"></i>
+                                        <p>Something wrong</p>
+
+                                    </div>
+
+                                    <!--Footer-->
+                                    <div class="modal-footer flex-center">
+                                        <a type="button" class="btn  btn-primary-modal waves-effect" data-dismiss="modal">Close</a>
+                                    </div>
+                                </div>
+                                <!--/.Content-->
+                            </div>
+                        </div>  
+                        @endif
             </div>
         </div>  
         <div class="row">

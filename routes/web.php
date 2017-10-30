@@ -25,6 +25,9 @@ Route::get('/akses', function(){
     return view('access.forbidden');
     
 });
+Route::get('/success', function(){
+    return view('notice.success');
+});
 Route::resource('applicant', 'JobappController@show');
 Route::resource('delete', 'JobappController@destroy');
 Route::resource('accept', 'JobappController@update');

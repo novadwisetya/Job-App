@@ -20,12 +20,14 @@
                 <i class="fa fa-envelope prefix indigo-text"></i>
                 <input type="email" id="form91" class="form-control validate" name="email">
                 <label for="form91" data-error="wrong" data-success="right">Email</label>
+                <span class="text-danger"> {!! $errors->first('email') !!} </span>
             </div>
     
             <div class="md-form form-group">
                 <i class="fa fa-lock prefix indigo-text"></i>
                 <input type="password" id="form92" class="form-control validate" name="password">
                 <label for="form92" data-error="wrong" data-success="right">Password</label>
+                <span class="text-danger"> {!! $errors->first('password') !!} </span>
             </div>
             
             <!--Grid row-->

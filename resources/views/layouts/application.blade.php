@@ -114,7 +114,7 @@
     <!--/.Navbar-->
     <!--Mask-->
     <div class="view hm-black-light">
-        <div class="full-bg-img flex-center">
+        <div class="full-bg-img flex-center" style="margin-top: 10px;">
              <!-- @if (Session::has('error'))
              <div class="card" style="width:400px;">
 

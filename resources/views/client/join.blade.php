@@ -27,6 +27,7 @@
                         <i class="fa fa-user prefix indigo-text"></i>
                         <input type="text" id="Form-email2" class="form-control" name="name">
                         <label for="Form-email2">Full name</label>  
+                        <span class="text-danger"> {!! $errors->first('name') !!} </span>
                     </div>   
                     <div class="text-danger">
                         
@@ -37,11 +38,10 @@
                         <i class="fa fa-envelope prefix indigo-text"></i>
                         <input type="text" id="Form-email2" class="form-control" name="email">
                         <label for="Form-email2">Email</label>
+                        <span class="text-danger"> {!! $errors->first('email') !!} </span>
                     </div>
 
-                    <div class="text-danger">
-                        
-                    </div>
+
                 </div>
         </div>  
         <div class="row">
@@ -49,7 +49,8 @@
                     <div class="md-form pb-3">
                     <i class="fa fa-address-book prefix indigo-text"></i>
                         <input type="text" id="Form-pass2" class="form-control" name="contact">
-                        <label for="Form-pass2">Contact</label>                
+                        <label for="Form-pass2">Contact</label>   
+                        <span class="text-danger"> {!! $errors->first('contact') !!} </span>             
                     </div>
 
                     <div class="text-danger">
@@ -61,7 +62,8 @@
                     <div class="md-form pb-3">
                         <i class="fa fa-address-book prefix indigo-text"></i>
                         <input type="text" id="Form-pass2" class="form-control" name="address">
-                        <label for="Form-pass2">Address</label>                
+                        <label for="Form-pass2">Address</label>  
+                        <span class="text-danger"> {!! $errors->first('address') !!} </span>               
                     </div>
 
                     <div class="text-danger">
@@ -71,7 +73,9 @@
             </div> 
             <div class="md-form">
                 <p class="grey-text">Upload CV</p>
-                <input type="file" name="cv"/>              
+                <input type="file" name="cv"/>
+                <br>
+                <span class="text-danger"> {!! $errors->first('cv') !!} </span>               
             </div>
             <div class="md-form align-self-center text-center">
                 <input type="submit" class="btn btn-indigo indigo">            
